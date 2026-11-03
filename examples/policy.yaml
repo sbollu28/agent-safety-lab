@@ -1,0 +1,24 @@
+# Illustrative policy only. Not parsed or enforced by software in this repository.
+version: 1
+policy_name: example-network-ops-agent
+default_decision: deny
+principals:
+  - id: example-network-operator
+    allowed_assets: [lab-router-01, lab-fw-01]
+rules:
+  - id: allow-status-reads
+    operations: [read_interface_status, read_routing_summary]
+    decision: allow
+  - id: gated-config-change
+    operations: [propose_config_change]
+    decision: require_approval
+    constraints:
+      exact_asset_binding: true
+      exact_diff_binding: true
+      dry_run_required: true
+      preflight_required: true
+      postcheck_required: true
+      fail_closed_on_missing_telemetry: true
+  - id: deny-direct-config
+    operations: [execute_arbitrary_command, export_credentials]
+    decision: deny
