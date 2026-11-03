@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "agent-safety-lab"
+version = "0.1.0"
+description = "Synthetic offline network-agent safety guardrail evaluation"
+readme = "README.md"
+requires-python = ">=3.10"
+[project.scripts]
+agent-safety-lab = "agent_safety_lab.cli:main"
+[tool.setuptools.packages.find]
+where = ["src"]
