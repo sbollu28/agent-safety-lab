@@ -28,6 +28,23 @@ This repository documents my technical background and a research-oriented portfo
 | [Prompt Injection Threat Model](docs/prompt-injection-threat-model.md) | Threat-model draft | Trust boundaries, untrusted retrieval, and tool-output manipulation |
 | [Evaluation Plan](docs/evaluation-plan.md) | Proposed methodology | Test cases and measurable safety outcomes |
 
+## Runnable policy automation platform (synthetic)
+
+A separate end-to-end local demonstration integrates ticket intake, engineer-approved flows, simplified site-scoped authorization, polymorphic address resolution, a mock deployment backend, SQLite audit history, fail-stop execution, site onboarding, and an explicitly triggered **manual mock rollback**.
+
+**[Full source, commands, architecture and limitations](docs/runnable-policy-platform.md)**
+
+```bash
+python -m pip install -e .
+agent-policy-demo --db demo.sqlite3 init-demo
+agent-policy-demo --db demo.sqlite3 submit CHG-1001 alice lab-west monitor-https
+agent-policy-demo --db demo.sqlite3 run
+agent-policy-demo --db demo.sqlite3 status
+agent-policy-demo --db demo.sqlite3 rollback reviewer CHG-1001
+```
+
+No live integrations, authenticated actors, SSH connections, or production network changes are performed.
+
 ## Demonstration artifact
 
 [`examples/policy.yaml`](examples/policy.yaml) is an **illustrative, non-production policy** for a hypothetical agent allowed to inspect network state but requiring human approval before configuration changes.

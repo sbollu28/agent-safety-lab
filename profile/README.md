@@ -34,6 +34,11 @@ An **offline, synthetic security-engineering prototype** that independently chec
 
 [Explore the code and benchmark →](https://github.com/sbollu28/agent-safety-lab)
 
+## Featured runnable engineering project
+
+### [Synthetic Network Policy Automation Platform](https://github.com/sbollu28/agent-safety-lab/blob/main/docs/runnable-policy-platform.md)
+**Implemented, offline and reproducible:** A Python/SQLite application demonstrating ticket intake, engineer-approved flow catalogs, site-scoped entitlements, polymorphic address resolution, mock configuration deployment, audit records, failure stops, separate site onboarding, and explicitly triggered manual mock rollback. Uses invented sites and documentation-only IP addresses; contains no employer source code or live integrations.
+
 ## Additional public engineering demonstrations
 
 ### [Policy Catalog & Polymorphic Site Resolver](https://github.com/sbollu28/agent-safety-lab/blob/main/portfolio/synthetic-demos.md)
