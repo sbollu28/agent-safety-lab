@@ -34,6 +34,17 @@ An **offline, synthetic security-engineering prototype** that independently chec
 
 [Explore the code and benchmark →](https://github.com/sbollu28/agent-safety-lab)
 
+## Additional public engineering demonstrations
+
+### [Policy Catalog & Polymorphic Site Resolver](https://github.com/sbollu28/agent-safety-lab/blob/main/portfolio/synthetic-demos.md)
+**Implemented, synthetic offline demo.** Demonstrates how one approved logical firewall flow resolves into different site-specific addresses, with fail-closed handling of missing mappings, unknown flows, and synthetic site-entitlement checks.
+
+### [Ticket Workflow & Failure-State Simulator](https://github.com/sbollu28/agent-safety-lab/blob/main/portfolio/synthetic-demos.md)
+**Implemented, synthetic offline demo.** Models sequential ticket evaluation, simulated change outcomes, stop-on-failure behavior, and a review-required manual rollback note. No Jira, SSH, or real rollback integration.
+
+### [Policy Automation Architecture Review](https://github.com/sbollu28/agent-safety-lab/blob/main/portfolio/policy-automation-rbac-review.md)
+**Sanitized professional architecture analysis.** Reviews the decision boundaries and failure tradeoffs of a policy-controlled self-service network automation workflow supporting approximately 50 sites. The actual employer implementation is not included.
+
 ## Selected professional engineering work
 
 > The work below describes professional experience and is not published as employer source code or employer system documentation.
